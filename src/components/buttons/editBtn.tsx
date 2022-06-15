@@ -1,6 +1,9 @@
+import style from "../../../styles/buttons/btn.module.css";
+
 const EditBtn = () => {
   return (
     <svg
+      className={style.editBtn}
       width='34'
       height='39'
       viewBox='0 0 34 39'

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "../../../node_modules/next/link";
 import style from "../../../styles/navbar/navbar.module.css";
 import MenuBtn from "../buttons/menuBtn";
@@ -6,11 +6,39 @@ import CircleAvatar from "../profile/CircleAvatar";
 
 const Navbar = () => {
   const [showMobile, setShowMobile] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    if (showMobile) {
+      document.body.style.overflow = "hidden";
+    } else if (!showMobile) {
+      document.body.style.overflow = "auto";
+    }
+  }, [showMobile]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth);
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (windowSize.width >= "990") {
+      document.body.style.overflow = "auto";
+      setShowMobile(false);
+    }
+  }, [windowSize]);
 
   return (
     <>
       <nav className={style.nav}>
-        <Link href={"/"} passHref>
+        <Link href={"/dashboard"} passHref>
           <div className={style.left}>Setlife</div>
         </Link>
         <div className={style.right}>
@@ -32,15 +60,23 @@ const Navbar = () => {
             <Navitem
               setShowMobile={setShowMobile}
               text={"Projects"}
-              href={"/"}
+              href={"/dashboard"}
             />
-            <Navitem setShowMobile={setShowMobile} text={"Forum"} href={"/"} />
+            <Navitem
+              setShowMobile={setShowMobile}
+              text={"Forum"}
+              href={"/dashboard"}
+            />
             <Navitem
               setShowMobile={setShowMobile}
               text={"Database"}
-              href={"/"}
+              href={"/dashboard"}
             />
-            <Navitem setShowMobile={setShowMobile} text={"Search"} href={"/"} />
+            <Navitem
+              setShowMobile={setShowMobile}
+              text={"Search"}
+              href={"/dashboard"}
+            />
             <div className={style.profileImgContainer}>
               <CircleAvatar />
             </div>

@@ -1,6 +1,9 @@
-const AddIcon = () => {
+import style from "../../../styles/buttons/btn.module.css";
+
+const AddBtn = () => {
   return (
     <svg
+      className={style.addBtn}
       width='40'
       height='40'
       viewBox='0 0 40 40'
@@ -17,4 +20,4 @@ const AddIcon = () => {
   );
 };
 
-export default AddIcon;
+export default AddBtn;

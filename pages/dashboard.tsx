@@ -61,16 +61,16 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div className='mb-8'>
+      <div className='mt-8 mb-8'>
         <PageHeader text={"Dasboard"} />
       </div>
       <div className='container'>
-        <div className={style.row}>
+        <div className={`${style.row} ${style.heightFull}`}>
           <ProjectContainer projects={projects} />
           <VerticalDivider />
           <DatabaseContainer items={databaseItems} />
         </div>
-        <div className='constrain-90'>
+        <div className='constrain-90 tablet-hide'>
           <HorizontalDivider />
         </div>
         <ForumContainer posts={forumItems} />

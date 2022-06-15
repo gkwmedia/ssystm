@@ -10,12 +10,15 @@ const PostPreview = ({ post }) => {
     <div>
       <div className='row align-center justify-between'>
         <div className='row'>
-          <div>
+          <div className='cursor-pointer'>
             <SmallCircleAvatar user={post.author} />
           </div>
-          <h3>{`${post.author.name} [${post.author.location}]: ${post.title}`}</h3>
+          <h3
+            className={
+              style.postTitle
+            }>{`${post.author.name} [${post.author.location}]: ${post.title}`}</h3>
         </div>
-        <div className='tablet-row'>
+        <div className='tablet-row cursor-pointer'>
           <CommentIcon />
           <CommentCounter commentNum={1} />
         </div>
@@ -24,7 +27,12 @@ const PostPreview = ({ post }) => {
         <HorizontalDivider />
       </div>
       <div className='constrain-90 tablet-row justify-between'>
-        <p>{`${post.most_recent_comment.commenter.name} replied ${post.most_recent_comment.time} minutes ago`}</p>
+        <p className={style.mostRecentComment}>
+          <span className='cursor-pointer'>
+            {post.most_recent_comment.commenter.name}
+          </span>
+          {` replied ${post.most_recent_comment.time} minutes ago`}
+        </p>
         <div className={style.categoryWrapper}>
           {post.categories.map((c: string) => {
             return <PostCategory key={c} category={c} />;

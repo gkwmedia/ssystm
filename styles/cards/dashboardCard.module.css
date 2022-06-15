@@ -7,7 +7,6 @@
 
 @media (min-width: 990px) {
   .dashboardCard {
-    height: 100%;
     padding: 1rem 2rem;
     flex: 1 1 0;
   }

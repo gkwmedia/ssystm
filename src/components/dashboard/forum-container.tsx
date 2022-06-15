@@ -1,16 +1,15 @@
-import CommentCounter from "../forum/comment-counter";
 import PostPreview from "../forum/post-preview";
 import { Post } from "../../interfaces/post";
 import DashboardCard from "../cards/dashboardCard";
 import PageHeader from "../headers/page-header";
-import AddIcon from "../icons/add-icon";
+import AddBtn from "../buttons/add-btn";
 
 const ForumContainer = ({ posts }) => {
   return (
     <div>
-      <div className='row justify-center mt-4'>
+      <div className='flex gap-1 justify-center mt-4'>
         <PageHeader text={"Forum"} />
-        <AddIcon />
+        <AddBtn />
       </div>
       <DashboardCard>
         {posts.map((post: Post) => {

@@ -12,8 +12,8 @@
   .verticalDivider {
     display: block;
     width: 1px;
-    height: 70px;
-    margin-inline: 0.5rem;
+    margin: 2rem 0.5rem;
+
     background-color: var(--dividerColor);
   }
 }

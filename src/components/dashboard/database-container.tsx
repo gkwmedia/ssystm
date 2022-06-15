@@ -11,7 +11,7 @@ import EditBtn from "../buttons/editBtn";
 const DatabaseContainer = ({ items }) => {
   return (
     <DashboardCard>
-      <div className='row justify-center align-center'>
+      <div className='flex gap-1 justify-center align-center'>
         <PageHeader text={"Database"} />
         <EditBtn />
       </div>
@@ -19,9 +19,9 @@ const DatabaseContainer = ({ items }) => {
         <div className={style.whiteContainer}>
           {items.map((item: Database) => {
             return (
-              <div key={item.id}>
+              <div className='cursor-pointer' key={item.id}>
                 <div className='row justify-between px-4'>
-                  <div className='row'>
+                  <div className='row py-1'>
                     <Image
                       src={item.image.url}
                       width={50}

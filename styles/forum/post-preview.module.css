@@ -4,3 +4,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
+
+.mostRecentComment {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.postTitle {
+  cursor: pointer;
+  font-weight: bold;
+}

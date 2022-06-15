@@ -1,8 +1,12 @@
 .primaryBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primaryColor);
   border-radius: 15px;
   height: 44px;
   width: 145px;
+  font-weight: 700;
   font-size: 20px;
   transition: all 200ms ease-in-out;
   cursor: pointer;
@@ -12,4 +16,16 @@
   transform: scale(1.05);
   transform: translateY(-3px);
   box-shadow: 1 1 1 0;
+}
+
+.editBtn {
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  fill: var(--primaryColor);
+}
+
+.addBtn {
+  cursor: pointer;
 }

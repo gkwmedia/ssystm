@@ -1,3 +1,4 @@
+import style from "../../../styles/projects/title-header.module.css";
 import { Project } from "../../interfaces/projectStruct";
 import PrimaryBtn from "../buttons/primayBtn";
 import DashboardCard from "../cards/dashboardCard";
@@ -14,7 +15,7 @@ const ProjectContainer = ({ projects }) => {
             return (
               <div key={project.id} className='row mb-4 cursor-pointer'>
                 <ProjectIcon />
-                <h3>{project.name}</h3>
+                <h3 className={style.titleHeader}>{project.name}</h3>
               </div>
             );
           })}
