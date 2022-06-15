@@ -2,7 +2,6 @@ import Image from "../../../node_modules/next/image";
 import style from "../../../styles/profile/circleAvatar.module.css";
 
 const SmallCircleAvatar = ({ user }) => {
-  console.log(user);
   return (
     <div className={style.smallImageWrapper}>
       <Image
