@@ -1,0 +1,10 @@
+.commentCounter {
+  padding: 10px;
+  aspect-ratio: 1/1;
+  background-color: var(--warmAccentColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  overflow: hidden;
+}

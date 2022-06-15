@@ -1,0 +1,19 @@
+.horizontalDivider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--dividerColor);
+}
+
+.verticalDivider {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .verticalDivider {
+    display: block;
+    width: 1px;
+    height: 70px;
+    margin-inline: 0.5rem;
+    background-color: var(--dividerColor);
+  }
+}

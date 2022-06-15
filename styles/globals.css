@@ -1,3 +1,10 @@
+:root {
+  --primaryColor: #84cee5;
+  --accentColor: #f4eaea;
+  --warmAccentColor: #f19b9b;
+  --dividerColor: #afaaad;
+}
+
 html,
 body {
   padding: 0;
@@ -11,6 +18,111 @@ a {
   text-decoration: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 660px) {
+  .tablet-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (min-width: 990px) {
+  .desktop-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.constrain-90 {
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.constrain-95 {
+  max-width: 95%;
+  margin-inline: auto;
+}
+
+.contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+@media (min-width: 990px) {
+  .container {
+    max-width: 1250px;
+    margin-inline: auto;
+  }
 }

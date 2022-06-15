@@ -1,0 +1,14 @@
+.dashboardCard {
+  background-color: var(--accentColor);
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  flex: 1 1 0;
+}
+
+@media (min-width: 990px) {
+  .dashboardCard {
+    height: 100%;
+    padding: 1rem 2rem;
+    flex: 1 1 0;
+  }
+}

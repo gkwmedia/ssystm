@@ -1,0 +1,98 @@
+.line {
+  position: absolute;
+  right: 0.5rem;
+
+  width: 30px;
+  height: 0.2rem;
+  background-color: var(--dividerColor);
+  border-radius: 20px;
+}
+
+.line1 {
+  transform: translateY(0.5rem);
+}
+
+.line2 {
+}
+
+.line3 {
+  transform: translateY(-0.5rem);
+}
+
+.open1 {
+  animation: open1 500ms forwards ease-in-out;
+}
+
+.close1 {
+  animation: close1 500ms forwards;
+}
+
+@keyframes open1 {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes close1 {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+.open2 {
+  animation: open1 500ms forwards ease-in-out;
+}
+
+.close2 {
+  animation: close2 500ms forwards;
+}
+
+@keyframes open2 {
+  100% {
+    display: none;
+  }
+}
+
+@keyframes close2 {
+  100% {
+    display: block;
+  }
+}
+
+.open3 {
+  animation: open3 500ms forwards ease-in-out;
+}
+
+.close3 {
+  animation: close3 500ms forwards;
+}
+
+@keyframes open3 {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes close3 {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(-0.5rem);
+  }
+}

@@ -1,0 +1,14 @@
+.imageWrapper {
+  border-radius: 100px;
+  overflow: hidden;
+  height: 105px;
+  width: 105px;
+}
+
+.smallImageWrapper {
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  overflow: hidden;
+  height: 46px;
+  width: 46px;
+}

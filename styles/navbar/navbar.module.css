@@ -1,0 +1,100 @@
+.nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  z-index: 9999;
+}
+
+.left {
+  cursor: pointer;
+  font-style: italic;
+  color: var(--primaryColor);
+  font-weight: 700;
+  font-size: 44px;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.mobileButton {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 35px;
+  cursor: pointer;
+}
+
+.itemsContainer {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  background-color: white;
+  color: 000;
+  transition: all 200ms ease-in-out;
+}
+
+.showMenu {
+  width: 100vw;
+}
+
+.hideMenu {
+  width: 0;
+}
+
+.link {
+  font-size: 25px;
+  transition: all 150ms ease-in-out;
+}
+
+.link:hover {
+  color: var(--primaryColor);
+}
+
+@media (min-width: 990px) {
+  .nav {
+    margin-bottom: 35px;
+  }
+
+  .right {
+    height: auto;
+    width: auto;
+  }
+
+  .itemsContainer {
+    position: static;
+    width: auto;
+    height: auto;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    background: none;
+  }
+  .mobileButton {
+    display: none;
+  }
+
+  .profileImgContainer {
+    padding-top: 70px;
+  }
+  .nav {
+    padding: 0 2rem;
+  }
+}

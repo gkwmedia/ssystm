@@ -1,0 +1,8 @@
+.postCategory {
+  background-color: var(--primaryColor);
+  border-radius: 20px;
+  padding: 0.25rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

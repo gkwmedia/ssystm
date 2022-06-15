@@ -1,0 +1,13 @@
+@media (min-width: 990px) {
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.whiteContainer {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: inset -2px 4px 4px rgba(0, 0, 0, 0.25);
+}

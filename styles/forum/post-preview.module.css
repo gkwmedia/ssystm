@@ -1,0 +1,6 @@
+.categoryWrapper {
+  display: grid;
+  min-width: 120px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
