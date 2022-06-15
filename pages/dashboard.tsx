@@ -62,7 +62,7 @@ const Dashboard = () => {
   return (
     <div>
       <div className='mt-8 mb-8'>
-        <PageHeader text={"Dasboard"} />
+        <PageHeader text={"Dashboard"} />
       </div>
       <div className='container'>
         <div className={`${style.row} ${style.heightFull}`}>
